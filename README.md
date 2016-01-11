@@ -28,8 +28,8 @@ Cookbook Creator during its installation will also install required gems:
 `cookbook_create <cookbook_name> <options>`
 
 Where:
-* <cookbook_name> is obligatory
-* <options> can be:
+* cookbook_name is obligatory
+* options can be:
   - `-c, --config <path_to_custom_config_file>`
   - `-g, --generator_cookbook <path to custom cookbook template>`
   - `-m, --maintainer <maintainer>`
