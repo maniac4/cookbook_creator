@@ -86,9 +86,9 @@ module CookbookCreator
     def locate_local_config
       candidate_configs = []
 
-      # Look for $ARROW_HOME/generator.rb (allow multiple generator config on same machine)
-      if env['ARROW_HOME']
-        candidate_configs << File.join(env['ARROW_HOME'], 'generator.rb')
+      # Look for $COOKBOOK_GENERATOR_HOME/generator.rb (allow multiple generator config on same machine)
+      if env['COOKBOOK_GENERATOR_HOME']
+        candidate_configs << File.join(env['COOKBOOK_GENERATOR_HOME'], 'generator.rb')
       end
       # Look for $PWD/generator.rb
       if Dir.pwd
