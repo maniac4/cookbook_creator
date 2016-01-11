@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+#
+# Copyright (c) 2016 Tacit Knowledge, All Rights Reserved.
+#
+
+Kernel.trap(:INT) { print("\n"); exit 1 }
+
+$:.unshift(File.expand_path(File.join(File.dirname(__FILE__), "..", "lib")))
+require 'cookbook_creator/main'
+
+CookbookCreator::Main.new(ARGV.clone).run

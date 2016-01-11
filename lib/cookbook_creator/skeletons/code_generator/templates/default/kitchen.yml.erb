@@ -1,0 +1,25 @@
+---
+<% if driver.eql?('docker') %>
+driver:
+  name: docker
+  use_sudo: false
+<% else %>
+driver:
+  name: vagrant
+<% end %>
+
+provisioner:
+  name: <%= provisioner %>
+
+platforms:
+  - name: <%= platform %>
+    driver_config:
+      image: <%= image %>
+
+suites:
+  - name: default
+    run_list:
+      - recipe[<%= cookbook_name %>::default]
+    attributes: {
+    }
+
